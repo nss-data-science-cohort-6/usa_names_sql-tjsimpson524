@@ -80,10 +80,26 @@ WHERE name LIKE 'Stev_'
 
 -- 'Steven' is more popular spelling with 5 compared to only 1 for 'Stephen'
 
-SELECT gender, COUNT(DISTINCT name) 
-FROM names
-HAVING Count(*)>1
 
--- ??
+HAVING COUNT(*)>1
+WHERE gender = 'M' 
+
+
+SELECT COUNT(DISTINCT name)
+FROM names
+
+HAVING COUNT(*)>1/COUNT(gender) 
+
+
+-- 98400 unisex names --
+
+
+
+
+SELECT COUNT(gender),COUNT(DISTINCT name) 
+from names
+WHERE gender  
+HAVING 
+
 
 
